@@ -3,7 +3,20 @@
 </p>
 <button (click)="getVideos()">GET</button>
 
-<div *ngFor="let video of a">
-  {{video.snippet.title }}
-  <img src="{{video.snippet.thumbnails.standard.url}}" alt="">
+
+<div class="container">
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-3" *ngFor="let video of a.items">
+        <div class="card mb-3">
+          <img src="http://col3negoriginal.lk/videoimg/1637652900.jpg" alt="">
+          <div class="card-body">
+            <h5 class="card-title">{{video.snippet.title }}</h5>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
 </div>
