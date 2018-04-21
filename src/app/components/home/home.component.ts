@@ -8,11 +8,14 @@ import {HttpClient} from '@angular/common/http';
 })
 export class HomeComponent implements OnInit {
   videos: any;
+  a: any;
+  url = 'https://content.googleapis.com/youtube/v3/playlistItems?playlistId=PLB-GuAsjHIZYLFD5sZ7YlGODZpUPMhDq-&maxResults=25&part=snippet,contentDetails&key=AIzaSyAL_QDjBpwlxGNGWgeiAkAQ1MGuNMjX1co';
   constructor(private http: HttpClient) { }
   getVideos() {
     console.log('GER');
-    this.videos = this.http.get('https://www.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=UC_x5XG1OV2P6uZZ5FSM9Ttw&key=AIzaSyAL_QDjBpwlxGNGWgeiAkAQ1MGuNMjX1co ').subscribe(res => console.log(res));
-
+    this.videos = this.http.get(this.url).subscribe(res => this.a = res.items);
+    this.videos = this.http.get(this.url).subscribe(res => console.log(res));
+    console.log('sdsads');
   }
   ngOnInit() {
   }

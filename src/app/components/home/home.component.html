@@ -3,6 +3,7 @@
 </p>
 <button (click)="getVideos()">GET</button>
 
-<div *ngFor="let video of videos">
-  {{video}}
+<div *ngFor="let video of a">
+  {{video.snippet.title }}
+  <img src="{{video.snippet.thumbnails.standard.url}}" alt="">
 </div>
