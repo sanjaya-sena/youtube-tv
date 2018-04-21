@@ -7,13 +7,17 @@ import { WebModule } from './web.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './components/footer/footer.component';
+import { EpisodeListComponent } from './components/episode-list/episode-list.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    FooterComponent,
+    EpisodeListComponent
   ],
   imports: [
     BrowserModule,
