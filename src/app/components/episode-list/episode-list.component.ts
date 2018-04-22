@@ -15,7 +15,7 @@ export class EpisodeListComponent implements OnInit {
 
   ngOnInit() {
     this.videos = this.http.get(this.url).subscribe((res: HttpResponse < any >) => this.a = res);
-    this.videos = this.http.get(this.url).subscribe(res => this.nextPageToken = res.nextPageToken);
+    // this.videos = this.http.get(this.url).subscribe(res => this.nextPageToken = res.nextPageToken);
 
   }
 

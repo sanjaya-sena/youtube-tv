@@ -1,40 +1,53 @@
+
+<!--<div class="container">-->
+  <!--<div class="col-md-12">-->
+    <!--<div class="row">-->
+      <!--<div class="col-sm-3" *ngFor="let video of a.items">-->
+        <!--<div class="card mb-3">-->
+          <!--<img src="http://col3negoriginal.lk/videoimg/1637652900.jpg" alt="">-->
+
+          <!--<div class="card-body" style="padding: 10px" >-->
+            <!--<p class="card-title ">{{video.snippet.title }}</p>-->
+            <!--<a href="#" class="btn btn-primary">VIEW</a>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
 <div class="container">
-  <div class="col-sm-12">
-    <!-- Home -->
-
-    <div class="home" style="margin-bottom: 20px">
-      <div class="home_background_container prlx_parent">
-        <div class="home_background prlx" style="background-image:url(https://s1-ssl.dmcdn.net/pt1Tk.jpg)"></div>
-      </div>
-
-      <div class="home_title">
-        <h2>KOTIPATHIYO</h2>
-        <div class="next_section_scroll">
-          <div class="next_section nav_links" data-scroll-to=".service_boxes">
-            <i class="fas fa-chevron-down trans_200"></i>
-            <i class="fas fa-chevron-down trans_200"></i>
+  <div class="w3_agile_featured_movies">
+    <div class="col-md-12 wthree_agile-movies_list">
+      <div class="w3l-movie-gride-agile col-md-2" *ngFor="let video of a.items">
+        <a href="#" class="hvr-sweep-to-bottom"><img src="http://col3negoriginal.lk/videoimg/1637652900.jpg" title="Movies Pro" class="img-responsive" alt=" ">
+          <div class="w3l-action-icon"><i class="fa fa-play-circle-o" aria-hidden="true"></i></div>
+        </a>
+        <div class="mid-1 agileits_w3layouts_mid_1_home">
+          <div class="w3l-movie-text">
+            <h6><a href="#">{{video.snippet.title }}</a></h6>
+          </div>
+          <div class="mid-2 agile_mid_2_home">
+            <p>2016</p>
+            <div class="block-stars">
+              <ul class="w3l-ratings">
+                <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+            <div class="clearfix"></div>
           </div>
         </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-<div class="container">
-  <div class="col-md-12">
-    <div class="row">
-      <div class="col-sm-3" *ngFor="let video of a.items">
-        <div class="card mb-3">
-          <img src="http://col3negoriginal.lk/videoimg/1637652900.jpg" alt="">
-
-          <div class="card-body" style="padding: 10px" >
-            <p class="card-title ">{{video.snippet.title }}</p>
-            <a href="#" class="btn btn-primary">VIEW</a>
-          </div>
+        <div class="ribben">
+          <p>NEW</p>
         </div>
       </div>
     </div>
   </div>
+
+
 </div>
 <div class="container">
   <button (click)="nextPage()" class="btn btn-info">NEXT</button>
